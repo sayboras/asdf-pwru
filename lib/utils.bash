@@ -66,6 +66,7 @@ install_version() {
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
 		echo "tool cmd: " $tool_cmd
 		echo "install path: " $install_path
+		ls -lrt "$install_path"
 		chmod +x "$install_path/$tool_cmd"
 		test -x "$install_path/$tool_cmd" || fail "Expected $install_path/$tool_cmd to be executable."
 
